@@ -20,10 +20,6 @@ services:
         sync: false
       - key: APP_TITLE
         value: Erwin
-      - key: DOMAIN_CLIENT
-        sync: false
-      - key: DOMAIN_SERVER
-        sync: false
       - key: ALLOW_EMAIL_LOGIN
         value: "true"
       - key: ALLOW_REGISTRATION
@@ -46,7 +42,7 @@ services:
         value: "604800000"
       - key: SUPABASE_URL
         value: https://ottyikzfkkzxddcywjpx.supabase.co
-      - key: SUPABASE_ANON_KEY
+      - key: SUPABASE_PUBLISHABLE_KEY
         sync: false
       - key: OPENAI_API_KEY
         value: user_provided

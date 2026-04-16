@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
     const userResponse = await fetch(`${supabaseUrl}/auth/v1/user`, {
       headers: {
         Authorization: `Bearer ${access_token}`,
-        apikey: process.env.SUPABASE_ANON_KEY || '',
+        apikey: process.env.SUPABASE_PUBLISHABLE_KEY || '',
       },
     });
 
