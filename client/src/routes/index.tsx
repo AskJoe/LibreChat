@@ -17,6 +17,7 @@ import StartupLayout from './Layouts/Startup';
 import LoginLayout from './Layouts/Login';
 import dashboardRoutes from './Dashboard';
 import ShareRoute from './ShareRoute';
+import SSOCallback from './SSOCallback';
 import ChatRoute from './ChatRoute';
 import Search from './Search';
 import Root from './Root';
@@ -38,6 +39,11 @@ const baseHref = baseEl?.getAttribute('href') || '/';
 
 export const router = createBrowserRouter(
   [
+    {
+      path: 'sso',
+      element: <SSOCallback />,
+      errorElement: <RouteErrorBoundary />,
+    },
     {
       path: 'share/:shareId',
       element: <ShareRoute />,

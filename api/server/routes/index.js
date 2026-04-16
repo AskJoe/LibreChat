@@ -28,12 +28,14 @@ const files = require('./files');
 const share = require('./share');
 const tags = require('./tags');
 const auth = require('./auth');
+const sso = require('./sso');
 const keys = require('./keys');
 const user = require('./user');
 const mcp = require('./mcp');
 
 module.exports = {
   mcp,
+  sso,
   auth,
   adminAuth,
   adminConfig,
