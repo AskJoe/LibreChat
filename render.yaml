@@ -6,7 +6,7 @@ services:
     branch: main
     region: oregon
     plan: starter
-    buildCommand: npm install && npm run frontend
+    buildCommand: npm install --include=dev && npm run frontend
     startCommand: npm run backend
     healthCheckPath: /health
     envVars:
