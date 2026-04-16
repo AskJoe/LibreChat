@@ -1,0 +1,62 @@
+services:
+  - type: web
+    name: erwin-chat
+    runtime: node
+    repo: https://github.com/AskJoe/LibreChat.git
+    branch: main
+    region: oregon
+    plan: starter
+    buildCommand: npm install && npm run frontend
+    startCommand: npm run backend
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 3080
+      - key: MONGO_URI
+        sync: false
+      - key: APP_TITLE
+        value: Erwin
+      - key: DOMAIN_CLIENT
+        sync: false
+      - key: DOMAIN_SERVER
+        sync: false
+      - key: ALLOW_EMAIL_LOGIN
+        value: "true"
+      - key: ALLOW_REGISTRATION
+        value: "true"
+      - key: ALLOW_UNVERIFIED_EMAIL_LOGIN
+        value: "true"
+      - key: ALLOW_SOCIAL_LOGIN
+        value: "false"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: CREDS_KEY
+        generateValue: true
+      - key: CREDS_IV
+        value: e2341419ec3dd3d19b13a1a87fafcbfb
+      - key: SESSION_EXPIRY
+        value: "900000"
+      - key: REFRESH_TOKEN_EXPIRY
+        value: "604800000"
+      - key: SUPABASE_URL
+        value: https://ottyikzfkkzxddcywjpx.supabase.co
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        value: user_provided
+      - key: ANTHROPIC_API_KEY
+        value: user_provided
+      - key: GOOGLE_KEY
+        value: user_provided
+      - key: HELP_AND_FAQ_URL
+        value: https://marketpower.ai
+      - key: SEARCH
+        value: "false"
+      - key: NO_INDEX
+        value: "true"
