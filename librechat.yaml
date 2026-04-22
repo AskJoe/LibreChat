@@ -22,12 +22,12 @@ interface:
   # Users CANNOT save/load presets
   presets: false
 
-  # Agents: users can USE agents you built, but CANNOT create/edit/share
+  # Agents: users can USE and see public agents, but CANNOT create/edit/share
   agents:
     use: true
     create: false
     share: false
-    public: false
+    public: true
 
   # Prompts: users can use prompts, but not create/share
   prompts:
@@ -44,7 +44,7 @@ interface:
   runCode: false
 
   marketplace:
-    use: false
+    use: true
 
 registration:
   socialLogins: []
