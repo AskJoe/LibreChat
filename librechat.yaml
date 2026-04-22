@@ -8,43 +8,15 @@ cache: true
 # Use Supabase Storage (S3-compatible) for persistent file storage
 fileStrategy: "s3"
 
-# Interface permissions for default USER role
-# Admin users bypass these restrictions automatically
+# Interface settings (non-permission fields only)
+# Permission fields (agents, prompts, webSearch, etc.) are managed via
+# Admin Panel → Roles, NOT here — because this YAML overwrites BOTH
+# USER and ADMIN roles on every restart.
 interface:
   customWelcome: 'Welcome to Erwin — your AI assistant, powered by CloudWise Academy.'
-
-  # Users CAN select models from the dropdown
   modelSelect: true
-
-  # Users CANNOT adjust model parameters (temperature, tokens, etc.)
-  parameters: false
-
-  # Users CANNOT save/load presets
-  presets: false
-
-  # Agents: users can USE and see public agents, but CANNOT create/edit/share
-  agents:
-    use: true
-    create: false
-    share: false
-    public: true
-
-  # Prompts: users can use prompts, but not create/share
-  prompts:
-    use: true
-    create: false
-    share: false
-    public: false
-
-  bookmarks: true
-  multiConvo: true
-  fileSearch: false
-  fileCitations: true
-  webSearch: false
-  runCode: false
-
-  marketplace:
-    use: true
+  parameters: true
+  presets: true
 
 registration:
   socialLogins: []
