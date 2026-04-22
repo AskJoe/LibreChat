@@ -66,4 +66,17 @@ services:
         sync: false
       - key: GEMINI_API_KEY
         sync: false
+      # Supabase Storage (S3-compatible) for persistent file uploads
+      - key: AWS_ENDPOINT_URL
+        value: https://mdnkbikjiuuudsrfzgkb.supabase.co/storage/v1/s3
+      - key: AWS_BUCKET_NAME
+        value: erwin-files
+      - key: AWS_REGION
+        value: us-east-1
+      - key: AWS_FORCE_PATH_STYLE
+        value: "true"
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
 
