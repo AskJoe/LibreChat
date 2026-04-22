@@ -35,8 +35,10 @@ interface:
 
   bookmarks: true
   multiConvo: true
-  fileSearch: true
+  fileSearch: false
   fileCitations: true
+  webSearch: false
+  runCode: false
 
   marketplace:
     use: false
