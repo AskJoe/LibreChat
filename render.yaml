@@ -62,6 +62,8 @@ services:
         value: "true"
       - key: IMAGE_GEN_OAI_API_KEY
         sync: false
+      - key: IMAGE_GEN_OAI_MODEL
+        value: gpt-image-2
       - key: GEMINI_API_KEY
         sync: false
 
