@@ -1,0 +1,45 @@
+# Erwin / CloudWise Academy — LibreChat Configuration
+# https://www.librechat.ai/docs/configuration/librechat_yaml
+
+version: 1.3.8
+
+cache: true
+
+# Interface permissions for default USER role
+# Admin users bypass these restrictions automatically
+interface:
+  customWelcome: 'Welcome to Erwin — your AI assistant, powered by CloudWise Academy.'
+
+  # Users CAN select models from the dropdown
+  modelSelect: true
+
+  # Users CANNOT adjust model parameters (temperature, tokens, etc.)
+  parameters: false
+
+  # Users CANNOT save/load presets
+  presets: false
+
+  # Agents: users can USE agents you built, but CANNOT create/edit/share
+  agents:
+    use: true
+    create: false
+    share: false
+    public: false
+
+  # Prompts: users can use prompts, but not create/share
+  prompts:
+    use: true
+    create: false
+    share: false
+    public: false
+
+  bookmarks: true
+  multiConvo: true
+  fileSearch: true
+  fileCitations: true
+
+  marketplace:
+    use: false
+
+registration:
+  socialLogins: []
